@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 30px;
+    color: #e60023;
+    /* Pinterest red */
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.nav-links a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-section i {
+    font-size: 20px;
+    color: #333;
+    position: relative;
+}
+
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #e60023;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+
+.profile i {
+    font-size: 30px;
+    color: #333;
+}
+.container{
+    margin-top: 50px ;
+}
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+
+}
+
+.container .box .dream img {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 769px) {
+    .container .box {
+        flex-direction: column;
+    }
+
+    .container .box .dream {
+        width: 100%;
+    }
+}
+
+.uploadBtn{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    background-color: #e60023;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
