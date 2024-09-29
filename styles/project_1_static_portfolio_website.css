@@ -1,0 +1,271 @@
+/* General reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #170312;
+    font-family: "Playwrite DE Grund", cursive;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+header {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #999999;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #4472CA;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Mobile responsiveness */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    height: 90vh;
+    background-color: #170312;
+    padding: 0 5%;
+    /* Add padding to prevent content touching edges */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.content {
+    max-width: 1200px;
+    /* Limit the max width to prevent stretching */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(24, end),
+        blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+        /* Ensures full width of the container */
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+.content #contact-btn {
+    background-color: #4472CA;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.content #contact-btn:hover {
+    background-color: #fff;
+    color: #4472CA;
+}
+
+img {
+    border-radius: 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 1219px) {
+    .home {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    img {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content p {
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+/* For smaller breakpoints */
+@media (max-width: 768px) {
+    
+    nav {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #999999;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        transform: translateY(-20px);
+    }
+    nav.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    nav a {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .home {
+        padding: 20px;
+        text-align: center;
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content p {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 90%;
+    }
+}
